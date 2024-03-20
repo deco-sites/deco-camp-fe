@@ -55,7 +55,8 @@ import * as $$$$$$43 from "./sections/Product/ShelfWithImage.tsx";
 import * as $$$$$$44 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$45 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$46 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$47 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$47 from "./sections/Temperature/Temperature.tsx";
+import * as $$$$$$48 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -117,7 +118,8 @@ const manifest = {
     "deco-sites/deco-camp-fe/sections/Product/Wishlist.tsx": $$$$$$44,
     "deco-sites/deco-camp-fe/sections/Social/InstagramPosts.tsx": $$$$$$45,
     "deco-sites/deco-camp-fe/sections/Social/WhatsApp.tsx": $$$$$$46,
-    "deco-sites/deco-camp-fe/sections/Theme/Theme.tsx": $$$$$$47,
+    "deco-sites/deco-camp-fe/sections/Temperature/Temperature.tsx": $$$$$$47,
+    "deco-sites/deco-camp-fe/sections/Theme/Theme.tsx": $$$$$$48,
   },
   "apps": {
     "deco-sites/deco-camp-fe/apps/decohub.ts": $$$$$$$$$$$0,

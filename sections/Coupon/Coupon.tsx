@@ -10,7 +10,7 @@ export interface Props {
   benefits: string[];
 }
 
-export default function Coupon(props: Props) {
+export default function Coupon({ coupon, benefits }: Props) {
   return (
     <div class="w-full container px-4 py-8 flex flex-col gap-6 lg:py-10 lg:px-0 items-center">
       <h2 class="leading-6 lg:leading-8 text-base-content lg:text-3xl text-center">
@@ -19,14 +19,14 @@ export default function Coupon(props: Props) {
       </h2>
 
       <button class="relative font-medium lg:text-[20px] px-4 py-2">
-        {props.coupon}
+        {coupon}
       </button>
 
       <div class="flex flex-col items-center">
-        <span class="text-lg">Confira os benefícios em usar nossa cupom:</span>
+        <span class="text-lg">Confira os benefícios em usar nosso cupom:</span>
 
         <ul class="flex flex-col items-center">
-          {props.benefits.map((benefit, i) => {
+          {benefits.map((benefit, i) => {
             return (
               <li key={`coupon-benefit-${i}`} class="text-lg text-center">
                 {benefit}
