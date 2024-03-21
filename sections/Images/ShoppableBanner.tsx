@@ -77,9 +77,9 @@ export default function ShoppableBanner(props: Props) {
   const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div class="container">
-      <div class="card lg:card-side rounded grid grid-cols-1 lg:grid-cols-2">
-        <figure class="relative">
+    <div class="container my-12">
+      <div class="card lg:card-side rounded grid gap-4 md:gap-6 grid-cols-1 lg:grid-cols-2">
+        <figure class="relative rounded-xl sm:rounded-xl">
           <Picture>
             <Source
               media="(max-width: 767px)"
@@ -127,7 +127,7 @@ export default function ShoppableBanner(props: Props) {
             </>
           ))}
         </figure>
-        <div class="flex flex-col justify-center gap-6 py-20 px-8 bg-neutral-content">
+        <div class="flex flex-col justify-center gap-6 py-20 px-8">
           <h2 class={`card-title flex ${title?.layout?.position}`}>
             {title?.content}
           </h2>

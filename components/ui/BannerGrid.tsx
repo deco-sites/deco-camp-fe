@@ -128,7 +128,7 @@ export default function BannnerGrid(props: Props) {
     <section class="container w-full px-4 md:px-0 mx-auto">
       {title &&
         (
-          <div class="py-6 md:py-0 md:pb-[40px] flex items-center mt-6 relative justify-center">
+          <div class="py-6 md:py-0 md:pb-[40px] flex items-center relative justify-center">
             <h2 class="bg-white text-lg leading-5 font-semibold uppercase text-center z-10 px-4">
               {title}
             </h2>
