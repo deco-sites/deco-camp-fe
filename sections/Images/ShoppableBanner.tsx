@@ -1,87 +1,98 @@
-import { Picture, Source } from 'apps/website/components/Picture.tsx'
-import type { ImageWidget } from 'apps/admin/widgets.ts'
-import Image from 'apps/website/components/Image.tsx'
+import { Picture, Source } from "apps/website/components/Picture.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
   image: {
-    mobile: ImageWidget
-    desktop?: ImageWidget
-    altText: string
-  }
+    mobile: ImageWidget;
+    desktop?: ImageWidget;
+    altText: string;
+  };
 
-  pins?: Pin[]
+  pins?: Pin[];
 
   title?: {
-    content?: string
+    content?: string;
     layout?: {
-      position?: 'justify-start' | 'justify-center' | 'justify-end'
-    }
-  }
+      position?: "justify-start" | "justify-center" | "justify-end";
+    };
+  };
   text?: {
-    content?: string
+    content?: string;
     layout?: {
-      position?: 'text-center' | 'text-left' | 'text-right'
-    }
-  }
+      position?: "text-center" | "text-left" | "text-right";
+    };
+  };
   link?: {
     layout?: {
-      position?: 'justify-start' | 'justify-center' | 'justify-end'
-    }
-    text: string
-    href: string
-  }
+      position?: "justify-start" | "justify-center" | "justify-end";
+    };
+    text: string;
+    href: string;
+  };
 }
 
 export interface Pin {
   mobile: {
-    x: number
-    y: number
-  }
+    x: number;
+    y: number;
+  };
   desktop?: {
-    x: number
-    y: number
-  }
-  link: string
-  label: string
+    x: number;
+    y: number;
+  };
+  link: string;
+  label: string;
 }
 
 const DEFAULT_PROPS: Props = {
   title: {
     layout: {
-      position: 'justify-center',
+      position: "justify-center",
     },
-    content: 'Collection',
+    content: "Collection",
   },
   text: {
     layout: {
-      position: 'text-center',
+      position: "text-center",
     },
-    content: 'Your text',
+    content: "Your text",
   },
   link: {
     layout: {
-      position: 'justify-center',
+      position: "justify-center",
     },
-    href: '#',
-    text: 'Text link',
+    href: "#",
+    text: "Text link",
   },
   pins: [],
   image: {
-    mobile: 'https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/cac2dc1c-48ac-4274-ad42-4016b0bbe947',
-    altText: 'Fashion',
+    mobile:
+      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/cac2dc1c-48ac-4274-ad42-4016b0bbe947",
+    altText: "Fashion",
   },
-}
+};
 
 export default function ShoppableBanner(props: Props) {
-  const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props }
+  const { link, text, title, image, pins } = { ...DEFAULT_PROPS, ...props };
 
   return (
     <div class="container py-8 lg:py-10">
       <div class="card lg:card-side rounded grid gap-4 md:gap-6 grid-cols-1 lg:grid-cols-2">
         <figure class="relative rounded-xl sm:rounded-xl">
           <Picture>
-            <Source media="(max-width: 767px)" src={image?.mobile} width={150} height={150} />
-            <Source media="(min-width: 768px)" src={image?.desktop ? image?.desktop : image?.mobile} width={384} height={227} />
+            <Source
+              media="(max-width: 767px)"
+              src={image?.mobile}
+              width={150}
+              height={150}
+            />
+            <Source
+              media="(min-width: 768px)"
+              src={image?.desktop ? image?.desktop : image?.mobile}
+              width={384}
+              height={227}
+            />
             <img
               class="w-full h-full object-cover"
               sizes="(max-width: 640px) 100vw, 30vw"
@@ -117,8 +128,12 @@ export default function ShoppableBanner(props: Props) {
           ))}
         </figure>
         <div class="flex flex-col justify-center gap-6 py-20 px-8">
-          <h2 class={`card-title flex ${title?.layout?.position}`}>{title?.content}</h2>
-          <p class={`text-base-content ${text?.layout?.position}`}>{text?.content}</p>
+          <h2 class={`card-title flex ${title?.layout?.position}`}>
+            {title?.content}
+          </h2>
+          <p class={`text-base-content ${text?.layout?.position}`}>
+            {text?.content}
+          </p>
           <div class={`card-actions ${link?.layout?.position}`}>
             <a class="underline" href={link?.href}>
               {link?.text}
@@ -127,5 +142,5 @@ export default function ShoppableBanner(props: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
