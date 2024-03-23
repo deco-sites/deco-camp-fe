@@ -8,6 +8,7 @@ import * as $$$2 from "./loaders/availableIcons.ts";
 import * as $$$3 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$4 from "./loaders/temperature.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -57,7 +58,8 @@ import * as $$$$$$45 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$46 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$47 from "./sections/Social/WhatsApp.tsx";
 import * as $$$$$$48 from "./sections/Temperature/Temperature.tsx";
-import * as $$$$$$49 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$49 from "./sections/TemperatureFloating/TemperatureFloating.tsx";
+import * as $$$$$$50 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -65,6 +67,7 @@ const manifest = {
     "deco-sites/deco-camp-fe/loaders/icons.ts": $$$3,
     "deco-sites/deco-camp-fe/loaders/Layouts/ProductCard.tsx": $$$0,
     "deco-sites/deco-camp-fe/loaders/List/Sections.tsx": $$$1,
+    "deco-sites/deco-camp-fe/loaders/temperature.ts": $$$4,
   },
   "sections": {
     "deco-sites/deco-camp-fe/sections/Animation/Animation.tsx": $$$$$$0,
@@ -122,7 +125,9 @@ const manifest = {
     "deco-sites/deco-camp-fe/sections/Social/InstagramPosts.tsx": $$$$$$46,
     "deco-sites/deco-camp-fe/sections/Social/WhatsApp.tsx": $$$$$$47,
     "deco-sites/deco-camp-fe/sections/Temperature/Temperature.tsx": $$$$$$48,
-    "deco-sites/deco-camp-fe/sections/Theme/Theme.tsx": $$$$$$49,
+    "deco-sites/deco-camp-fe/sections/TemperatureFloating/TemperatureFloating.tsx":
+      $$$$$$49,
+    "deco-sites/deco-camp-fe/sections/Theme/Theme.tsx": $$$$$$50,
   },
   "apps": {
     "deco-sites/deco-camp-fe/apps/decohub.ts": $$$$$$$$$$$0,
