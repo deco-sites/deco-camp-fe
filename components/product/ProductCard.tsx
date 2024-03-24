@@ -283,7 +283,7 @@ function ProductCard({
                 )
                 : (
                   <div
-                    class="truncate text-sm lg:text-sm text-neutral"
+                    class="truncate text-base-content text-xs md:text-sm font-light"
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
                   />
                 )}
