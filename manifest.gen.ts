@@ -35,7 +35,7 @@ import * as $$$$$$22 from "./sections/Coupon/Coupon.tsx";
 import * as $$$$$$23 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$24 from "./sections/Gallery.tsx";
 import * as $$$$$$25 from "./sections/Header/Header.tsx";
-import * as $$$$$$26 from "./sections/HorizontalProduct/HorizontalProduct.tsx";
+import * as $$$$$$26 from "./sections/HorizontalProductCard/HorizontalProductCard.tsx";
 import * as $$$$$$27 from "./sections/Images/BannerGrid.tsx";
 import * as $$$$$$28 from "./sections/Images/Carousel.tsx";
 import * as $$$$$$29 from "./sections/Images/ImageGallery.tsx";
@@ -98,7 +98,7 @@ const manifest = {
     "deco-sites/deco-camp-fe/sections/Footer/Footer.tsx": $$$$$$23,
     "deco-sites/deco-camp-fe/sections/Gallery.tsx": $$$$$$24,
     "deco-sites/deco-camp-fe/sections/Header/Header.tsx": $$$$$$25,
-    "deco-sites/deco-camp-fe/sections/HorizontalProduct/HorizontalProduct.tsx":
+    "deco-sites/deco-camp-fe/sections/HorizontalProductCard/HorizontalProductCard.tsx":
       $$$$$$26,
     "deco-sites/deco-camp-fe/sections/Images/BannerGrid.tsx": $$$$$$27,
     "deco-sites/deco-camp-fe/sections/Images/Carousel.tsx": $$$$$$28,
