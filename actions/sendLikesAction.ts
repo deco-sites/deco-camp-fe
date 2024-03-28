@@ -1,20 +1,24 @@
-import { AppContext } from 'deco-sites/deco-camp-fe/apps/site.ts'
+import { AppContext } from "deco-sites/deco-camp-fe/apps/site.ts";
 
 export interface sendLikesActionProps {
-  productID: string
+  productID: string;
 }
 
-export default async function sendLikesAction(props: sendLikesActionProps, _req: Request, ctx: AppContext) {
-  const data = { productId: props.productID }
+export default async function sendLikesAction(
+  props: sendLikesActionProps,
+  _req: Request,
+  ctx: AppContext,
+) {
+  const data = { productId: props.productID };
 
-  const response = await fetch('https://camp-api.deco.cx/event', {
-    method: 'POST',
+  const response = await fetch("https://camp-api.deco.cx/event", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': String(ctx.secretLikes.get()),
+      "Content-Type": "application/json",
+      "x-api-key": String(ctx.secretLikes.get()),
     },
     body: JSON.stringify(data),
-  })
+  });
 
-  return response.json()
+  return response.json();
 }

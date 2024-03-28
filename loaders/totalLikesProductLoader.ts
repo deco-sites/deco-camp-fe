@@ -1,17 +1,24 @@
-import { AppContext } from 'deco-sites/deco-camp-fe/apps/site.ts'
+import { AppContext } from "deco-sites/deco-camp-fe/apps/site.ts";
 
 export interface totalLikesProductLoaderProps {
-  productID: string
+  productID: string;
 }
 
-export default async function totalLikesProductLoader(props: totalLikesProductLoaderProps, _req: Request, ctx: AppContext) {
-  const response = await fetch(`https://camp-api.deco.cx/event/${props.productID}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': String(ctx.secretLikes.get()),
+export default async function totalLikesProductLoader(
+  props: totalLikesProductLoaderProps,
+  _req: Request,
+  ctx: AppContext,
+) {
+  const response = await fetch(
+    `https://camp-api.deco.cx/event/${props.productID}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": String(ctx.secretLikes.get()),
+      },
     },
-  })
+  );
 
-  return response.json()
+  return response.json();
 }
