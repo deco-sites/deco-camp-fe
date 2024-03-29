@@ -1,5 +1,5 @@
-import Icon from "deco-sites/deco-camp-fe/components/ui/Icon.tsx";
-import { total } from "deco-sites/deco-camp-fe/sdk/useTotalLikes.ts";
+import Icon from 'deco-sites/deco-camp-fe/components/ui/Icon.tsx'
+import { total } from 'deco-sites/deco-camp-fe/sdk/useTotalLikes.ts'
 
 function LikesTotalHeaderIsland() {
   return (
@@ -7,7 +7,7 @@ function LikesTotalHeaderIsland() {
       <Icon id="Friends" width={24} height={24} />
       <span class="min-w-4 text-center text-xs font-thin">{total.value}</span>
     </div>
-  );
+  )
 }
 
-export default LikesTotalHeaderIsland;
+export default LikesTotalHeaderIsland
