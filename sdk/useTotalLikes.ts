@@ -1,3 +1,3 @@
-import { signal } from '@preact/signals'
+import { signal } from "@preact/signals";
 
-export const total = signal(0)
+export const total = signal(0);
