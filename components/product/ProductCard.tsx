@@ -137,6 +137,7 @@ function ProductCard({ product, preload, itemListName, layout, platform, index }
             </div>
           )}
         </div>
+        
 
         {/* Product Images */}
         <a href={url && relative(url)} aria-label="view product" class="grid grid-cols-1 grid-rows-1 w-full">
