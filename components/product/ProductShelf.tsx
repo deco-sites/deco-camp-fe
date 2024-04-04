@@ -1,75 +1,92 @@
-import { SendEventOnView } from '../../components/Analytics.tsx'
-import ProductCard, { Layout as cardLayout } from '../../components/product/ProductCard.tsx'
-import Icon from '../../components/ui/Icon.tsx'
-import Header from '../../components/ui/SectionHeader.tsx'
-import Slider from '../../components/ui/Slider.tsx'
-import SliderJS from '../../islands/SliderJS.tsx'
-import { useId } from '../../sdk/useId.ts'
-import { useOffer } from '../../sdk/useOffer.ts'
-import { usePlatform } from '../../sdk/usePlatform.tsx'
-import type { Product } from 'apps/commerce/types.ts'
-import { mapProductToAnalyticsItem } from 'apps/commerce/utils/productToAnalyticsItem.ts'
-import { clx } from '../../sdk/clx.ts'
+import { SendEventOnView } from "../../components/Analytics.tsx";
+import ProductCard, {
+  Layout as cardLayout,
+} from "../../components/product/ProductCard.tsx";
+import Icon from "../../components/ui/Icon.tsx";
+import Header from "../../components/ui/SectionHeader.tsx";
+import Slider from "../../components/ui/Slider.tsx";
+import SliderJS from "../../islands/SliderJS.tsx";
+import { useId } from "../../sdk/useId.ts";
+import { useOffer } from "../../sdk/useOffer.ts";
+import { usePlatform } from "../../sdk/usePlatform.tsx";
+import type { Product } from "apps/commerce/types.ts";
+import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
+import { clx } from "../../sdk/clx.ts";
 
 export interface Props {
-  products: Product[] | null
-  title?: string
-  description?: string
+  products: Product[] | null;
+  title?: string;
+  description?: string;
   layout?: {
     numberOfSliders?: {
-      mobile?: 1 | 2 | 3 | 4 | 5
-      desktop?: 1 | 2 | 3 | 4 | 5
-    }
-    headerAlignment?: 'center' | 'left'
-    headerfontSize?: 'Normal' | 'Large' | 'Small'
-    showArrows?: boolean
-  }
-  cardLayout?: cardLayout
+      mobile?: 1 | 2 | 3 | 4 | 5;
+      desktop?: 1 | 2 | 3 | 4 | 5;
+    };
+    headerAlignment?: "center" | "left";
+    headerfontSize?: "Normal" | "Large" | "Small";
+    showArrows?: boolean;
+  };
+  cardLayout?: cardLayout;
 }
 
-function ProductShelf({ products, title, description, layout, cardLayout }: Props) {
-  const id = useId()
-  const platform = usePlatform()
+function ProductShelf(
+  { products, title, description, layout, cardLayout }: Props,
+) {
+  const id = useId();
+  const platform = usePlatform();
 
   if (!products || products.length === 0) {
-    return null
+    return null;
   }
   const slideDesktop = {
-    1: 'md:w-full',
-    2: 'md:w-1/2',
-    3: 'md:w-1/3',
-    4: 'md:w-1/4',
-    5: 'md:w-1/5',
-  }
+    1: "md:w-full",
+    2: "md:w-1/2",
+    3: "md:w-1/3",
+    4: "md:w-1/4",
+    5: "md:w-1/5",
+  };
 
   const slideMobile = {
-    1: 'w-full',
-    2: 'w-1/2',
-    3: 'w-1/3',
-    4: 'w-1/4',
-    5: 'w-1/5',
-  }
+    1: "w-full",
+    2: "w-1/2",
+    3: "w-1/3",
+    4: "w-1/4",
+    5: "w-1/5",
+  };
   return (
     <div class="container w-full px-4 md:px-0 mx-auto py-8 lg:py-10">
       <Header
-        title={title || ''}
-        description={description || ''}
-        fontSize={layout?.headerfontSize || 'Large'}
-        alignment={layout?.headerAlignment || 'center'}
+        title={title || ""}
+        description={description || ""}
+        fontSize={layout?.headerfontSize || "Large"}
+        alignment={layout?.headerAlignment || "center"}
       />
 
-      <div id={id} class={clx('grid mt-4 sm:mt-8', layout?.showArrows && 'grid-cols-[48px_1fr_48px]', 'px-0 container')}>
+      <div
+        id={id}
+        class={clx(
+          "grid mt-4 sm:mt-8",
+          layout?.showArrows && "grid-cols-[48px_1fr_48px]",
+          "px-0 container",
+        )}
+      >
         <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
               class={clx(
-                'carousel-item',
+                "carousel-item",
                 slideDesktop[layout?.numberOfSliders?.desktop ?? 3],
-                slideMobile[layout?.numberOfSliders?.mobile ?? 1]
+                slideMobile[layout?.numberOfSliders?.mobile ?? 1],
               )}
             >
-              <ProductCard product={product} itemListName={title} layout={cardLayout} platform={platform} index={index} />
+              <ProductCard
+                product={product}
+                itemListName={title}
+                layout={cardLayout}
+                platform={platform}
+                index={index}
+              />
             </Slider.Item>
           ))}
         </Slider>
@@ -92,7 +109,7 @@ function ProductShelf({ products, title, description, layout, cardLayout }: Prop
         <SendEventOnView
           id={id}
           event={{
-            name: 'view_item_list',
+            name: "view_item_list",
             params: {
               item_list_name: title,
               items: products.map((product, index) =>
@@ -107,7 +124,7 @@ function ProductShelf({ products, title, description, layout, cardLayout }: Prop
         />
       </div>
     </div>
-  )
+  );
 }
 
-export default ProductShelf
+export default ProductShelf;
