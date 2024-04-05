@@ -33,7 +33,7 @@ export default function PartialImageGallery(
       <div class="flex flex-wrap gap-2 md:gap-4 justify-center">
         {listImages.slice(0, renderQuant).map((image) => {
           return (
-            <div class="w-40 md:w-72 h-24 max-h-24 md:h-48 md:max-h-48 flex justify-center items-center overflow-hidden rounded md:rounded-xl duration-300 hover:scale-110">
+            <div class="w-40 md:w-64 h-24 max-h-24 md:h-40 md:max-h-40 flex justify-center items-center overflow-hidden rounded md:rounded-xl duration-300 hover:scale-110">
               <Image
                 width={304}
                 height={200}
