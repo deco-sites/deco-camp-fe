@@ -192,7 +192,7 @@ export default function HorizontalProductCard(
                     </span>
                   )}
                   {!!price && (
-                    <span class="text-sm text-secondary">
+                    <span class="text-sm text-primary">
                       {formatCurrency(price)}
                     </span>
                   )}
