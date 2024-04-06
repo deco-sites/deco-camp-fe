@@ -13,6 +13,7 @@ const colors: Record<string, string> = {
   marrom: "bg-[#A52A2A] ring-[#A52A2A]",
   preta: "bg-[#161616] ring-[#161616]",
   "verde-clara": "bg-[#90EE90] ring-[#90EE90]",
+  "verde-escura": "bg-[#155c15] ring-[#155c15]",
   vermelha: "bg-[#FF0000] ring-[#FF0000]",
 
   // Color variants - only applied when no color as content is passed

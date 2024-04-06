@@ -306,7 +306,7 @@ function ProductCard(
                     ? formatPrice(listPrice, offers?.priceCurrency)
                     : ""}
                 </div>
-                <div class="text-secondary lg:text-sm font-light">
+                <div class="text-primary lg:text-sm font-light">
                   {formatPrice(price, offers?.priceCurrency)}
                 </div>
               </div>
