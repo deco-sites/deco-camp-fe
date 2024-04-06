@@ -80,7 +80,7 @@ function CartItem(
             disabled={loading || isGift}
             loading={loading}
             class="btn-ghost btn-square"
-            aria-label='Botão de excluir produto'
+            aria-label="Botão de excluir produto"
             onClick={withLoading(async () => {
               const analyticsItem = itemToAnalyticsItem(index);
 

@@ -22,7 +22,7 @@ function ProductImageZoom({ images, width, height }: Props) {
     <>
       <Button
         class="hidden sm:inline-flex btn-ghost"
-        aria-label='botão de zoom no produto'
+        aria-label="botão de zoom no produto"
         onClick={() => open.value = true}
       >
         <Icon id="Zoom" size={24} />
