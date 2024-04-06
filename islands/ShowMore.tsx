@@ -50,7 +50,7 @@ export default function ShowMore(
           }
         }}
       >
-        Show More
+        Ver mais
       </button>
     </div>
   );

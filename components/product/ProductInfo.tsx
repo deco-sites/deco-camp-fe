@@ -91,7 +91,7 @@ function ProductInfo({ page, layout }: Props) {
       <div class="mt-4">
         <div class="flex flex-row gap-2 items-center">
           {(listPrice ?? 0) > price && (
-            <span class="line-through text-base-300 text-xs">
+            <span class="line-through text-xs text-base-content font-light">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}

@@ -244,7 +244,7 @@ function ProductCard(
               )
               : (
                 <ul
-                  class={`h-12 flex items-center gap-2 w-full overflow-auto p-3 ${
+                  class={`h-14 flex items-center gap-2 w-full overflow-auto p-3 ${
                     align === "center" ? "justify-center" : "justify-start"
                   } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
                 >
